@@ -4,6 +4,8 @@ name: Hello World
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 # 作业定义
 jobs:
