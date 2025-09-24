@@ -1,0 +1,14 @@
+# 1. 定义环境名称（必填）
+name: my_project_env  # 环境名，创建后可通过 "conda activate my_project_env" 激活
+
+# 2. 定义基础 Python 版本（必填）
+channels:  # 包的下载源（优先级从高到低）
+  - defaults  # Conda 官方默认源
+  - conda-forge  # 社区维护的第三方源（包更全，更新快）
+  - pytorch     # 特定领域源（如 PyTorch 官方源，按需添加）
+
+# 3. 依赖包列表（必填）
+dependencies:
+  # 3.1 Conda 官方源的包（可指定版本，也可省略让 Conda 自动匹配）
+  - python=3.9  # 强制指定 Python 3.9 版本（核心，必须明确）
+  - numpy=1.24.3  # 指定 numpy 版本
