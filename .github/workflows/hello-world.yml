@@ -1,0 +1,31 @@
+name: Hello World
+
+# 触发条件：当推送到 main 分支时运行
+on:
+  push:
+    branches: [ main ]
+
+# 作业定义
+jobs:
+  # 作业名称
+  say-hello:
+    # 运行环境
+    runs-on: ubuntu-latest
+    
+    # 步骤列表
+    steps:
+      # 步骤 1：检出代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      # 步骤 2：打印欢迎信息
+      - name: Print greeting
+        run: echo "Hello, GitHub Actions!"
+        
+      # 步骤 3：显示环境信息
+      - name: Show environment
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "GitHub SHA: $GITHUB_SHA"
+          echo "Repository: $GITHUB_REPOSITORY"
+
