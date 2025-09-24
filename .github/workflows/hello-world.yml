@@ -1,11 +1,7 @@
 name: Hello World
 
 # 触发条件：当推送到 main 分支时运行
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 # 作业定义
 jobs:
